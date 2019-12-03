@@ -451,12 +451,12 @@ namespace pprint {
 
   public:
 
-    PrettyPrinter(std::ostream& stream = std::cout) :
+    PrettyPrinter(std::ostream& stream = std::cout, bool compact = true) :
       stream_(stream),
       line_terminator_("\n"),
       indent_(2),
       quotes_(false),
-      compact_(false) {}
+      compact_(compact) {}
 
     PrettyPrinter& line_terminator(const std::string& value) {
       line_terminator_ = value;
